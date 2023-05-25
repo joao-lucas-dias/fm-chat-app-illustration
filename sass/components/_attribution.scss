@@ -4,7 +4,7 @@
 .attribution {
 	margin-top: 2rem;
 	text-align: center;
-	color: functions.map-deep-get(colors.$colors, "primary", 5);
+	color: functions.map-deep-get(colors.$colors, "primary", 2);
 
 	a {
 		color: functions.map-deep-get(colors.$colors, "primary", 4);

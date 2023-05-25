@@ -1,0 +1,68 @@
+@use "../abstracts/colors";
+@use "../abstracts/functions";
+@use "../base/typography";
+
+.app {
+	position: relative;
+	display: grid;
+	overflow: hidden;
+	border: 10px solid white;
+	border-radius: 30px;
+
+	&_header {
+		display: grid;
+		grid-template-columns: auto 1fr auto;
+		align-items: center;
+		column-gap: 0.5em;
+		padding: 2em 1.25em 1em 1.25em;
+		border-radius: 0 0 5px 5px;
+		background-image: map-get(colors.$colors, "gradient");
+
+		.user {
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
+
+			& > img {
+				width: 30px;
+				height: 30px;
+				border: 2px solid white;
+				border-radius: 50%;
+			}
+
+			& > div {
+				display: flex;
+				flex-direction: column;
+				gap: 0.15em;
+			}
+
+			&_name {
+				font-size: 14px;
+				font-weight: map-get($map: typography.$font-weights, $key: "medium");
+			}
+
+			&_status {
+				font-size: 10px;
+				color: functions.map-deep-get(colors.$colors, "primary", 3);
+			}
+		}
+	}
+
+	&_chat {
+		padding: 1em;
+
+		&_input {
+			padding: 0.5em;
+		}
+	}
+}
+
+.notch {
+	position: absolute;
+	top: 0;
+	left: 25%;
+	width: 50%;
+	height: 20px;
+	border-radius: 0 0 15px 15px;
+	background-color: white;
+}

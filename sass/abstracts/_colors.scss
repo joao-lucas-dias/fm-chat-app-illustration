@@ -13,8 +13,5 @@ $colors: (
 		3: hsl(289, 100%, 72%),
 		4: hsl(271, 36%, 24%)
 	),
-	gradient: (
-		1: hsl(293, 100%, 63%),
-		2: hsl(264, 100%, 61%)
-	)
+	gradient: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%))
 );
