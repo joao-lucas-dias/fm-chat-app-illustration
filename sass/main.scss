@@ -1,5 +1,11 @@
-@use "abstracts/variables";
 @use "abstracts/colors";
+@use "abstracts/functions";
+@use "abstracts/variables";
 
 @use "base/reset";
 @use "base/typography";
+
+@use "components/attribution";
+@use "components/hero";
+
+@use "pages/home";

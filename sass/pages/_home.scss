@@ -1,0 +1,9 @@
+@use "../abstracts/colors";
+@use "../abstracts/functions";
+
+body {
+	display: grid;
+	place-content: center;
+	padding-inline: 2rem;
+	background-color: functions.map-deep-get(colors.$colors, "secondary", 2);
+}

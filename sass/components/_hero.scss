@@ -1,0 +1,19 @@
+@use "../abstracts/colors";
+@use "../abstracts/functions";
+@use "../base/typography";
+
+.hero {
+	text-align: center;
+
+	h1 {
+		font-size: 40px;
+		font-weight: map-get($map: typography.$font-weights, $key: "medium");
+		margin-bottom: 1.75rem;
+		color: functions.map-deep-get(colors.$colors, "primary", 6);
+	}
+
+	p {
+		line-height: 1.7;
+		color: functions.map-deep-get(colors.$colors, "primary", 2);
+	}
+}

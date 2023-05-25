@@ -1,0 +1,12 @@
+@use "../abstracts/colors";
+@use "../abstracts/functions";
+
+.attribution {
+	margin-top: 2rem;
+	text-align: center;
+	color: functions.map-deep-get(colors.$colors, "primary", 5);
+
+	a {
+		color: functions.map-deep-get(colors.$colors, "primary", 4);
+	}
+}
