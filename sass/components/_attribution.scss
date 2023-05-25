@@ -2,7 +2,8 @@
 @use "../abstracts/functions";
 
 .attribution {
-	margin-top: 2rem;
+	position: absolute;
+	bottom: 0.5rem;
 	text-align: center;
 	color: functions.map-deep-get(colors.$colors, "primary", 2);
 

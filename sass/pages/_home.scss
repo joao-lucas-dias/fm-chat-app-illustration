@@ -3,7 +3,9 @@
 
 body {
 	display: grid;
+	row-gap: 3.5rem;
 	place-content: center;
+	justify-items: center;
 	padding-inline: 2rem;
 	background-color: functions.map-deep-get(colors.$colors, "secondary", 2);
 }

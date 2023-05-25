@@ -6,15 +6,16 @@
 	position: relative;
 	display: grid;
 	overflow: hidden;
-	border: 10px solid white;
+	border: 8px solid white;
 	border-radius: 30px;
+	width: 80%;
 
 	&_header {
 		display: grid;
 		grid-template-columns: auto 1fr auto;
 		align-items: center;
 		column-gap: 0.5em;
-		padding: 2em 1.25em 1em 1.25em;
+		padding: 1.875em 1em 0.75em 1em;
 		border-radius: 0 0 5px 5px;
 		background-image: map-get(colors.$colors, "gradient");
 
@@ -37,19 +38,65 @@
 			}
 
 			&_name {
-				font-size: 14px;
+				font-size: 11px;
 				font-weight: map-get($map: typography.$font-weights, $key: "medium");
 			}
 
 			&_status {
-				font-size: 10px;
+				font-size: 8px;
 				color: functions.map-deep-get(colors.$colors, "primary", 3);
 			}
 		}
 	}
 
 	&_chat {
-		padding: 1em;
+		display: grid;
+		row-gap: 1em;
+		padding: 0.75em 0.5em;
+
+		.sent {
+			align-items: flex-start;
+
+			.message {
+				border-radius: 10px 10px 10px 5px;
+				color: functions.map-deep-get(colors.$colors, "primary", 4);
+				background-color: hsl(272, 41%, 93%);
+			}
+		}
+
+		.received {
+			align-items: flex-end;
+
+			.message {
+				border-radius: 10px 10px 5px 10px;
+				color: functions.map-deep-get(colors.$colors, "primary", 5);
+				background-color: white;
+			}
+		}
+
+		.message-group {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5em;
+		}
+
+		.message-media {
+			display: flex;
+			justify-content: flex-end;
+			gap: 0.5em;
+
+			> img {
+				width: 40px;
+				border-radius: 10px;
+			}
+		}
+
+		.message {
+			max-width: 60%;
+			font-size: 8px;
+			line-height: 1.4;
+			padding: 0.75em 1em;
+		}
 
 		&_input {
 			padding: 0.5em;
@@ -62,7 +109,7 @@
 	top: 0;
 	left: 25%;
 	width: 50%;
-	height: 20px;
+	height: 18px;
 	border-radius: 0 0 15px 15px;
 	background-color: white;
 }
