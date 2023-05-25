@@ -17,7 +17,7 @@
 		column-gap: 0.5em;
 		padding: 1.875em 1em 0.75em 1em;
 		border-radius: 0 0 5px 5px;
-		background-image: map-get(colors.$colors, "gradient");
+		background-image: functions.map-deep-get(colors.$colors, "gradients", "normal");
 
 		.user {
 			display: flex;
@@ -53,6 +53,7 @@
 		display: grid;
 		row-gap: 1em;
 		padding: 0.75em 0.5em;
+		background-color: functions.map-deep-get(colors.$colors, "secondary", 2);
 
 		.sent {
 			align-items: flex-start;
@@ -61,6 +62,10 @@
 				border-radius: 10px 10px 10px 5px;
 				color: functions.map-deep-get(colors.$colors, "primary", 4);
 				background-color: hsl(272, 41%, 93%);
+			}
+
+			.radio {
+				border-radius: 10px 10px 10px 5px;
 			}
 		}
 
@@ -98,8 +103,37 @@
 			padding: 0.75em 1em;
 		}
 
+		.radio {
+			width: 75%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0.5rem 1rem 0.5rem 0.5rem;
+			background-image: functions.map-deep-get(colors.$colors, "gradients", "inverted");
+
+			> span:first-child {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				font-size: 8px;
+				font-weight: map-get(typography.$font-weights, "regular");
+			}
+
+			.price {
+				font-size: 12px;
+				font-weight: map-get(typography.$font-weights, "bold");
+			}
+		}
+
 		&_input {
-			padding: 0.5em;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+			border-radius: 20px;
+			font-size: 10px;
+			color: functions.map-deep-get(colors.$colors, "primary", 1);
+			background-color: white;
 		}
 	}
 }
