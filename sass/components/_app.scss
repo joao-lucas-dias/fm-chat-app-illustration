@@ -9,6 +9,7 @@
 	border: 10px solid white;
 	border-radius: 30px;
 	width: 80%;
+	background-color: functions.map-deep-get(colors.$colors, "secondary", 2);
 	box-shadow: 4px 5px 20px 7px #69696938;
 
 	&_header {

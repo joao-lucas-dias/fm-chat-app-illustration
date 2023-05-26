@@ -9,3 +9,13 @@ body {
 	padding-inline: 2rem;
 	background-color: functions.map-deep-get(colors.$colors, "secondary", 2);
 }
+
+.pill {
+	width: 130%;
+	height: 100%;
+	position: absolute;
+	top: -46%;
+	left: -80%;
+	border-radius: 250px;
+	background-image: functions.map-deep-get(colors.$colors, "gradients", "vertical");
+}
