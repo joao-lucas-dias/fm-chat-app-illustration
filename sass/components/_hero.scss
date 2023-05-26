@@ -8,7 +8,7 @@
 	h1 {
 		font-size: 40px;
 		font-weight: map-get($map: typography.$font-weights, $key: "medium");
-		margin-bottom: 1.75rem;
+		margin-bottom: 1.25rem;
 		color: functions.map-deep-get(colors.$colors, "primary", 6);
 	}
 
