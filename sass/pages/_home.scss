@@ -1,13 +1,23 @@
+@use "../abstracts/breakpoints" as bp;
 @use "../abstracts/colors";
 @use "../abstracts/functions";
 
 body {
 	display: grid;
-	row-gap: 4rem;
+	gap: 4rem;
 	place-content: center;
 	justify-items: center;
-	padding-inline: 2rem;
 	background-color: functions.map-deep-get(colors.$colors, "secondary", 2);
+
+	@include bp.media-lg {
+		grid-auto-flow: column;
+		align-items: center;
+		gap: 6rem;
+	}
+
+	@include bp.media-xl {
+		gap: 8rem;
+	}
 }
 
 .pill-wrapper {
@@ -19,21 +29,27 @@ body {
 
 	.pill {
 		width: 510px;
-		height: 1000px;
+		height: 125%;
 		position: absolute;
 		border-radius: 100vw;
 
 		&.left {
-			top: -30rem;
+			top: 0;
 			left: 0;
-			transform: translateX(clamp(-21rem, 22.857vw + -25.571rem, -5rem));
+			transform: translate(
+				clamp(-21rem, 19.286vw + -24.857rem, -7.5rem),
+				clamp(-42.5rem, 28.571vw + -48.214rem, -22.5rem)
+			);
 			background-image: functions.map-deep-get(colors.$colors, "gradients", "vertical");
 		}
 
 		&.right {
-			bottom: -30rem;
+			bottom: 0;
 			right: 0;
-			transform: translateX(calc(clamp(-21rem, 22.857vw + -25.571rem, -5rem) * -1));
+			transform: translate(
+				calc(clamp(-21rem, 19.286vw + -24.857rem, -7.5rem) * -1),
+				calc(clamp(-42.5rem, 28.571vw + -48.214rem, -22.5rem) * -1)
+			);
 			background-color: #ede7ef;
 		}
 	}
