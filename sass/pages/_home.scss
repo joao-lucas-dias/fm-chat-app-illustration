@@ -37,7 +37,7 @@ body {
 			top: 0;
 			left: 0;
 			transform: translate(
-				clamp(-21rem, 19.286vw + -24.857rem, -7.5rem),
+				clamp(-21rem, 22.143vw + -25.429rem, 10rem),
 				clamp(-42.5rem, 28.571vw + -48.214rem, -22.5rem)
 			);
 			background-image: functions.map-deep-get(colors.$colors, "gradients", "vertical");
@@ -47,7 +47,7 @@ body {
 			bottom: 0;
 			right: 0;
 			transform: translate(
-				calc(clamp(-21rem, 19.286vw + -24.857rem, -7.5rem) * -1),
+				calc(clamp(-21rem, 22.143vw + -25.429rem, 10rem) * -1),
 				calc(clamp(-42.5rem, 28.571vw + -48.214rem, -22.5rem) * -1)
 			);
 			background-color: #ede7ef;
