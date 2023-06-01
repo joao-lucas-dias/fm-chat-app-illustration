@@ -2,11 +2,12 @@
 @use "../abstracts/colors";
 @use "../abstracts/functions";
 
-body {
+main {
 	display: grid;
 	gap: 4rem;
 	place-content: center;
 	justify-items: center;
+	min-height: 100vh;
 	background-color: #fafafa;
 
 	@include bp.media-lg {
@@ -25,7 +26,6 @@ body {
 	height: 100vh;
 	overflow: hidden;
 	position: absolute;
-	z-index: -10;
 
 	.pill {
 		width: 510px;
@@ -53,4 +53,10 @@ body {
 			background-color: #f7f5fa;
 		}
 	}
+}
+
+aside {
+	width: 100%;
+	position: absolute;
+	bottom: 0.5rem;
 }
