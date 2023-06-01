@@ -5,6 +5,7 @@
 
 .hero {
 	text-align: center;
+	z-index: 10;
 
 	@include bp.media-lg {
 		text-align: left;
