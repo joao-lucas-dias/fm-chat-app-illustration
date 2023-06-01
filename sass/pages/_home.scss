@@ -7,7 +7,7 @@ body {
 	gap: 4rem;
 	place-content: center;
 	justify-items: center;
-	background-color: functions.map-deep-get(colors.$colors, "secondary", 2);
+	background-color: #fafafa;
 
 	@include bp.media-lg {
 		grid-auto-flow: column;
@@ -50,7 +50,7 @@ body {
 				calc(clamp(-21rem, 22.143vw + -25.429rem, 10rem) * -1),
 				calc(clamp(-42.5rem, 28.571vw + -48.214rem, -22.5rem) * -1)
 			);
-			background-color: #ede7ef;
+			background-color: #f9f4fa;
 		}
 	}
 }
